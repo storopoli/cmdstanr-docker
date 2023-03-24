@@ -41,8 +41,6 @@ jobs:
         with:
           image: ${{ env.IMAGE_NAME }}
           tags: ${{ env.IMAGE_TAGS }}
-          entrypoint: |
-            bash
           oci: true
           containerfiles: |
             ./Dockerfile
