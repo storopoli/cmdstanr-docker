@@ -10,7 +10,7 @@ Includes:
 ## How to use it
 
 - Docker: `docker pull jstoropoli/cmdstanr`
-- GitHub Repository Container (GHCR): `docker pull ghcr.io/storopoli/cmdstanr:latest`
+- GitHub Repository Container (GHCR): `docker pull ghcr.io/storopoli/cmdstanr`
 
 ## LICENSE
 
