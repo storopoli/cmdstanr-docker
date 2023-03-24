@@ -3,6 +3,7 @@ FROM rocker/r-ver
 # env vars
 ENV CSVER=2.31.0
 ENV CMDSTAN=/opt/cmdstan-$CSVER
+ENV HOME=/root
 
 # Rprofile stuff
 RUN echo 'options(Ncpus = max(1L, parallel::detectCores() - 1L), mc.cores = max(1L, parallel::detectCores() - 1L),)' >>"${R_HOME}/etc/Rprofile.parallel"
