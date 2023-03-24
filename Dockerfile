@@ -1,6 +1,6 @@
 FROM rocker/r-ver
 
-# Env vars
+# env vars
 ENV CSVER=2.31.0
 ENV CMDSTAN=/opt/cmdstan-$CSVER
 
@@ -32,3 +32,6 @@ WORKDIR $HOME
 RUN /rocker_scripts/install_tidyverse.sh
 RUN install2.r -e --ncpus -1 bayesplot loo brms
 RUN Rscript -e "install.packages('cmdstanr',dependencies=TRUE, repos = c('https://mc-stan.org/r-packages/', getOption('repos')))"
+
+# entrypoint to terminal
+ENTRYPOINT ["/bin/bash"]

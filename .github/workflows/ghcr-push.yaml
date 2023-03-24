@@ -45,7 +45,7 @@ jobs:
             bash
           oci: true
           containerfiles: |
-            ./Containerfile
+            ./Dockerfile
 
       # Push the image to GHCR (Image Registry)
       - name: Push To GHCR
