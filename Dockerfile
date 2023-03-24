@@ -6,7 +6,7 @@ ENV CMDSTAN=/opt/cmdstan-$CSVER
 ENV HOME=/root
 
 # Rprofile stuff
-RUN echo 'options(Ncpus = max(1L, parallel::detectCores() - 1L), mc.cores = max(1L, parallel::detectCores() - 1L),)' >>"${R_HOME}/etc/Rprofile.parallel"
+RUN echo 'options(Ncpus = max(1L, parallel::detectCores() - 1L), mc.cores = max(1L, parallel::detectCores() - 1L),)' >>"${R_HOME}/etc/Rprofile.site"
 
 # install openMPI and MPI's mpicxx binary and libglpk for brms
 RUN apt-get update && apt-get install -y --no-install-recommends build-essential curl libopenmpi-dev mpi-default-dev libglpk-dev
