@@ -31,7 +31,7 @@ WORKDIR $HOME
 
 # install cmdstanr with all features and all other stuff
 RUN /rocker_scripts/install_tidyverse.sh
-RUN install2.r -e --ncpus -1 bayesplot loo brms
+RUN install2.r -e --ncpus -1 bayesplot loo brms arrow
 RUN Rscript -e "install.packages('cmdstanr',dependencies=TRUE, repos = c('https://mc-stan.org/r-packages/', getOption('repos')))"
 
 # entrypoint to terminal
