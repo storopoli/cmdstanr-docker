@@ -3,7 +3,6 @@ FROM rocker/tidyverse
 # env vars
 ENV CSVER=2.31.0
 ENV CMDSTAN=/opt/cmdstan-$CSVER
-RUN useradd -ms /bin/bash user
 
 # Rprofile stuff
 RUN echo 'options(Ncpus = max(1L, parallel::detectCores() - 1L), mc.cores = max(1L, parallel::detectCores() - 1L))' >> "${R_HOME}/etc/Rprofile.site"
@@ -30,9 +29,8 @@ RUN cd cmdstan-$CSVER \
 RUN install2.r -e --ncpus -1 bayesplot loo brms arrow
 RUN Rscript -e "install.packages('cmdstanr',dependencies=TRUE, repos = c('https://mc-stan.org/r-packages/', getOption('repos')))"
 
-# go back to the main user directory
-USER user
-WORKDIR /home/user
+WORKDIR /home/rstudio
+CMD ["/init"]
 
 # entrypoint to terminal
 ENTRYPOINT ["/bin/bash"]
