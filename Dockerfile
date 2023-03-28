@@ -1,4 +1,4 @@
-FROM rocker/r-ver
+FROM rocker/tidyverse
 
 # env vars
 ENV CSVER=2.31.0
@@ -27,7 +27,6 @@ RUN cd cmdstan-$CSVER \
  && make -j2 build examples/bernoulli/bernoulli
 
 # install cmdstanr with all features and all other stuff
-RUN /rocker_scripts/install_tidyverse.sh
 RUN install2.r -e --ncpus -1 bayesplot loo brms arrow
 RUN Rscript -e "install.packages('cmdstanr',dependencies=TRUE, repos = c('https://mc-stan.org/r-packages/', getOption('repos')))"
 
