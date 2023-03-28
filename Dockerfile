@@ -1,5 +1,11 @@
 FROM rocker/tidyverse
 
+LABEL maintainer="Jose Storopoli <jose@storopoli.io>" \
+      org.opencontainers.image.authors="Jose Storopoli" \
+      org.opencontainers.image.url="https://hub.docker.com/repository/docker/jstoropoli/cmdstanr" \
+      org.label-schema.vcs-url="https://github.com/storopoli/cmdstanr-docker" \
+      org.label-schema.license="MIT"
+
 # env vars
 ENV CSVER=2.31.0
 ENV CMDSTAN=/opt/cmdstan-$CSVER
