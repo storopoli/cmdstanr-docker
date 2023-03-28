@@ -18,8 +18,8 @@ This means that all the [environment variables defined previously in Rocker](htt
 
 Here are some examples:
 
-- Run with RStudio Server in port `8787`: `docker run --rm -ti -e PASSWORD=yourpassword -p 8787:8787 rocker/rstudio`
-- Run with RStudio Server in port `8888` with `root` access: `docker run --rm -ti -e ROOT=true -e PASSWORD=yourpassword -p 8888:8787 rocker/rstudio`
+- Run with RStudio Server in port `8787`: `docker run --rm -ti -e PASSWORD=yourpassword -p 8787:8787 cmdstanr`
+- Run with RStudio Server in port `8888` with `root` access: `docker run --rm -ti -e ROOT=true -e PASSWORD=yourpassword -p 8888:8787 cmdstanr`
 
 ## LICENSE
 
