@@ -7,7 +7,7 @@ LABEL maintainer="Jose Storopoli <jose@storopoli.io>" \
   org.label-schema.license="MIT"
 
 # env vars
-ENV CSVER=2.32.1
+ENV CSVER=2.32.2
 ENV CMDSTAN=/opt/cmdstan-$CSVER
 
 # Rprofile stuff
